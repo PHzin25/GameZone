@@ -8,9 +8,6 @@ body {
     color: #fff;
 }
 
-/* =======================
-   HEADER
-======================= */
 header {
     width: 100%;
     padding: 20px 0;
@@ -23,9 +20,6 @@ header {
     box-shadow: 0 3px 10px rgba(0,0,0,0.5);
 }
 
-/* =======================
-   CONTAINER DOS CARDS
-======================= */
 .container {
     width: 90%;
     margin: 40px auto;
@@ -34,9 +28,6 @@ header {
     gap: 20px;
 }
 
-/* =======================
-   CARDS (botões)
-======================= */
 .container button {
     background: #1a1a1a;
     border: none;
