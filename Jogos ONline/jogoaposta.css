@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+     background: #111;
+    color: #fff;
+ text-align: center;
+ padding: 20px;
+ }
+ #pista {
+    transform: scaleX(1.1) translateX(-15px);
+ display: none;
+ position: relative;
+ width: 120%;
+ height: 120px;
+ background: #444;
+ margin-bottom: 40px;
+ border-radius: 10px;
+ overflow: hidden;
+ }
+ 
+ .corredor {
+ position: absolute;
+ top: 170px;
+ left: 0;
+ width: 60px;
+ height: 40px;
+ background: yellow;
+ border-radius: 10px;
+ text-align: center;
+ line-height: 40px;
+ font-weight: bold;
+ }
+ #corredor2 {
+    background-image: url(/Trabalho/img/62454804-cone-do-pixel-carro-bonito.png);
+ top: 230px;
+ background: cyan;
+ display: none;
+ 
+ }
+ #corredor1{
+   display: none;
+   
+ }
+ @keyframes correr {
+ to {
+ left: 90%;
+ }
+ }
+ button {
+ padding: 10px 20px;
+ font-size: 18px;
+ cursor: pointer;
+ margin-bottom: 20px;
+ background-color: #28a745;
+ border: none;
+ border-radius: 8px;
+ color: white;
+ align-items: center;
+ }
+ #iniciarCorrida{
+    display: none;
+    position: relative;
+    left: 44%;
+ }
+ #apostas {
+ margin-top:150px;
+ background: #222;
+ padding: 10px;
+ border-radius: 10px;
+ display: inline-block;
+ 
+ }
+ input, select {
+ padding: 5px;
+ margin: 5px;
+ }
+ #resultado {
+ font-size: 20px;
+ margin-top: 20px;
+ white-space: pre-line;
+ }
