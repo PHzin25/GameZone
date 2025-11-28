@@ -1,4 +1,4 @@
-name: Deploy & Quality Assurance
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -10,27 +10,26 @@ permissions:
   pages: write
   id-token: write
 
+# Permite apenas um deploy simultâneo
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
-    name: Deploy to Github pages
-    runs-on: ubuntu-lastest
-    if: github.ref == 'refs/heads/main'
-    outputs:
-      page_url: ${{ steps.deployment.outputs.page_url }}
+    name: Deploy Portfolio
+    runs-on: ubuntu-latest
 
+    # Configura o ambiente do GitHub Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup pages
+      - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
@@ -38,6 +37,6 @@ jobs:
         with:
           path: "."
 
-      - name: Deploy to GitHub pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
