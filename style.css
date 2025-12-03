@@ -24,6 +24,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
+    text-decoration: none;
 }
 
 .container button {
@@ -38,11 +39,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .container button:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+    text-decoration: none;
 }
 
 .container button img {
